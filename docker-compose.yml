@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  bind9:
+    image: internetsystemsconsortium/bind9:9.16
+    hostname: bind9
+    volumes:
+      - ./conf/named.conf.local:/etc/bind/named.conf.local:ro
+      - ./conf/db.example.kawauso-lab:/etc/bind/db.example.kawauso-lab:ro
+      - ./conf/db.0.168.192.in-addr.arpa:/etc/bind/db.0.168.192.in-addr.arpa:ro
+      - bind9-lib:/var/lib/bind
+      - bind9-cache:/var/cache/bind
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+      - "127.0.0.1:953:953/tcp"
+volumes:
+  bind9-lib:
+  bind9-cache:

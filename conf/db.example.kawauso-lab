@@ -1,0 +1,16 @@
+$TTL    3600
+@               IN  SOA     ns.kawauso-lab.example. root.kawauso-lab.example. (
+                                                    202108181       ; Serial
+                                                    1800            ; Refresh
+                                                    900             ; Retry
+                                                    604800          ; Expire
+                                                    1200            ; Minimum
+                                                    )
+;
+; Name Servers
+                IN  NS      ns.kawauso-lab.example. 
+;
+; Hosts
+@               IN  A       192.168.0.100
+ns              IN  A       192.168.0.100
+test            IN  A       192.168.0.100
