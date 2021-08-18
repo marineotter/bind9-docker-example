@@ -8,7 +8,7 @@
 
 zone "kawauso-lab.example" {
 	type master;
-	file "/etc/bind/db.example.kawauso-lab";
+	file "/etc/bind/db.kawauso-lab.example";
 	allow-query { any; };
 	allow-update { none; };
 };

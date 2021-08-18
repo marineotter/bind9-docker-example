@@ -5,7 +5,7 @@ services:
     hostname: bind9
     volumes:
       - ./conf/named.conf.local:/etc/bind/named.conf.local:ro
-      - ./conf/db.example.kawauso-lab:/etc/bind/db.example.kawauso-lab:ro
+      - ./conf/db.kawauso-lab.example:/etc/bind/db.kawauso-lab.example:ro
       - ./conf/db.0.168.192.in-addr.arpa:/etc/bind/db.0.168.192.in-addr.arpa:ro
       - bind9-lib:/var/lib/bind
       - bind9-cache:/var/cache/bind
