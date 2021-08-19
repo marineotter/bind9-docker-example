@@ -1,14 +1,10 @@
 version: "3.9"
 services:
   dns:
-    build: .
+    image: kawausolab/bind9:9.16.20
     hostname: dns
     volumes:
       - ./conf/:/etc/bind/:ro
-      - dns-cache:/var/cache/bind
     ports:
       - "53:53/udp"
       - "53:53/tcp"
-      - "127.0.0.1:953:953/tcp"
-volumes:
-  dns-cache:
